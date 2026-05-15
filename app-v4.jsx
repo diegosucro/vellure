@@ -213,13 +213,15 @@ function Transformations({ onAdd }) {
               <div className="trans__split">
                 <div className="trans__half trans__half--before">
                   <img src={c.imgBefore} alt={`${c.name} before`} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
-                  <span className="trans__lbl">Day 0</span>
                 </div>
                 <div className="trans__half trans__half--after">
                   <img src={c.imgAfter} alt={`${c.name} after`} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
-                  <span className="trans__lbl trans__lbl--after">Day 28</span>
                 </div>
                 <div className="trans__divider" />
+              </div>
+              <div className="trans__labels">
+                <span className="trans__lbl">Day 0</span>
+                <span className="trans__lbl trans__lbl--after">Day 28</span>
               </div>
               <div className="trans__caption">
                 <div className="trans__caption-row">
