@@ -309,11 +309,11 @@ function Doctor() {
       <div className="s__in">
         <div className="doc">
           <div className="doc__visual">
-            <image-slot
-              id="doctor-portrait"
-              placeholder="Drop portrait of Dr. Kim"
-              shape="rect"
-            ></image-slot>
+            <img
+              src="assets/doctor.jpg"
+              alt="Dr. Sarah Kim, MD"
+              style={{width:"100%", height:"100%", objectFit:"cover", display:"block"}}
+            />
             <div className="doc__visual-stamp">
               <span className="k">Board-Certified</span>
               <span className="v">Dermatologist</span>
