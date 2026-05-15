@@ -192,9 +192,9 @@ function Press() {
 /* ============ Transformations ============ */
 function Transformations({ onAdd }) {
   const cards = [
-    { name: "María G.", age: "47 · Miami, FL", quote: "After 3 weeks my husband noticed.", stats: [{k:"−42%", v:"Lines"}, {k:"+68%", v:"Firmness"}], slotBefore: "trans-1-before", slotAfter: "trans-1-after" },
-    { name: "Linda T.",  age: "52 · Los Angeles", quote: "Skin is noticeably smoother. I've reordered twice.", stats: [{k:"−51%", v:"Lines"}, {k:"+72%", v:"Glow"}], slotBefore: "trans-2-before", slotAfter: "trans-2-after" },
-    { name: "Sofia R.",  age: "34 · Houston, TX", quote: "Zero reaction. Just smooth, glowing skin.", stats: [{k:"+88%", v:"Texture"}, {k:"0", v:"Irritation"}], slotBefore: "trans-3-before", slotAfter: "trans-3-after" },
+    { name: "María G.", age: "47 · Miami, FL", quote: "After 3 weeks my husband noticed.", stats: [{k:"−42%", v:"Lines"}, {k:"+68%", v:"Firmness"}], imgBefore: "assets/result-1-before.png", imgAfter: "assets/result-1-after.png" },
+    { name: "Linda T.",  age: "52 · Los Angeles", quote: "Skin is noticeably smoother. I've reordered twice.", stats: [{k:"−51%", v:"Lines"}, {k:"+72%", v:"Glow"}], imgBefore: "assets/result-2-before.png", imgAfter: "assets/result-2-after.png" },
+    { name: "Sofia R.",  age: "34 · Houston, TX", quote: "Zero reaction. Just smooth, glowing skin.", stats: [{k:"+88%", v:"Texture"}, {k:"0", v:"Irritation"}], imgBefore: "assets/result-3-before.png", imgAfter: "assets/result-3-after.png" },
   ];
   return (
     <section className="s s--bone" id="results">
@@ -212,19 +212,11 @@ function Transformations({ onAdd }) {
             <div className="trans__card" key={i}>
               <div className="trans__split">
                 <div className="trans__half trans__half--before">
-                  <image-slot
-                    id={c.slotBefore}
-                    placeholder="Drop before photo"
-                    shape="rect"
-                  ></image-slot>
+                  <img src={c.imgBefore} alt={`${c.name} before`} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
                   <span className="trans__lbl">Day 0</span>
                 </div>
                 <div className="trans__half trans__half--after">
-                  <image-slot
-                    id={c.slotAfter}
-                    placeholder="Drop after photo"
-                    shape="rect"
-                  ></image-slot>
+                  <img src={c.imgAfter} alt={`${c.name} after`} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
                   <span className="trans__lbl trans__lbl--after">Day 28</span>
                 </div>
                 <div className="trans__divider" />
